@@ -27,13 +27,14 @@ public class FullNameApplication {
         System.out.println("If you have a suffix, please add it: ");
         String suffix = scan.nextLine();
 
-        String fullName = suffix + " " + firstName + " " +  middleName + " " + lastName;
+        String fullName = " " + firstName + " " +  middleName + " " + lastName + " ," + suffix;
 
         if (middleName.equalsIgnoreCase((hasMiddleName))) {
             System.out.println(firstName +  " " + lastName);
         } else {
             System.out.println(firstName + " " +  middleName + " " + lastName);
         }
+
 
     }
 }
