@@ -9,22 +9,17 @@ public class FullNameApplication {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        String hasMiddleName = "";
-        String hasSuffix = "";
+        String hasMiddleName = "None";
+        String hasSuffix = "None";
 
 
 
         System.out.print("What is your first name? ");
         String firstName = scan.nextLine();
 
-        System.out.println("What is your middle name , if you do not have one type none");
+        System.out.println("What is your middle name (if you do not have one type )");
         String middleName = scan.nextLine();
 
-        if (middleName.equalsIgnoreCase((hasMiddleName))) {
-            System.out.println("");
-        } else {
-            System.out.println(middleName);
-        }
 
         System.out.println("What is your last name?");
         String lastName = scan.nextLine();
@@ -32,14 +27,13 @@ public class FullNameApplication {
         System.out.println("If you have a suffix, please add it: ");
         String suffix = scan.nextLine();
 
-        if (suffix.equalsIgnoreCase((hasSuffix))) {
-            System.out.println("");
-        } else {
-            System.out.println(suffix);
-        }
+        String fullName = suffix + " " + firstName + " " +  middleName + " " + lastName;
 
-        String fullName = suffix + firstName + middleName + lastName;
-        System.out.println(fullName + ", " + suffix);
+        if (middleName.equalsIgnoreCase((hasMiddleName))) {
+            System.out.println(firstName +  " " + lastName);
+        } else {
+            System.out.println(firstName + " " +  middleName + " " + lastName);
+        }
 
     }
 }
